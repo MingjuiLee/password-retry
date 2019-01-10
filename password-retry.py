@@ -8,7 +8,9 @@
 password = 'a123456'	# 密碼的答案
 i = 3	# 因為i 所代表的是剩餘機會
 
-while True:	# while + 條件 當怎樣時 我們就怎樣
+# 當還有剩餘機會的時候 就可以進入迴圈
+# while True:	# while + 條件 當怎樣時 我們就怎樣
+while i > 0:
 	pwd = input('請輸入密碼: ')	# 不能存成password 因為這樣就重複使用 pwd=password縮寫
 	if pwd == password:	# 寫成 pwd == 'a123456'沒錯 但不好 因為已經存成變數了
 		print('登入成功!')
@@ -16,5 +18,7 @@ while True:	# while + 條件 當怎樣時 我們就怎樣
 	else:
 		i = i - 1	# 輸錯了 i就減少 減少完存回i裡面
 		print('密碼錯誤! 還有', i, '次機會')	# 印出 字串 整數 字串
+		''' 因為i = 0就不會進來
 		if i == 0:	# 沒有這一步驟 會一直算到負
 			break
+		'''
